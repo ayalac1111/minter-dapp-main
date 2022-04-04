@@ -14,8 +14,8 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "THE BORED APE CANNABIS CLUB";
-const description = "The Bored Ape Cannabis Club NFT Collection for Cannabis Connoiseurs  /n Flying High with Bored Apes";
+const namePrefix = "CA CLUB";
+const description = "The CA Club NFT Collection /n Playing with NFTs";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
@@ -25,7 +25,7 @@ const layerConfigurations = [
     // Code generated Apes from layers
     // For testing just use small numbers and 18 Genesis
     // For Polygon/Opensea.io Mainnet set to 9980 (+20 Genesis) = 10K for additional $$ (Max for NFTPro Free Tier = 5000 + an additional 500 from Johannes (ref: email 11 Mar 22)).
-      growEditionSizeTo: 5,
+      growEditionSizeTo: 15,
       layersOrder: [
         { name: "Backgrounds" },
         { name: "Apes" },
@@ -59,7 +59,7 @@ const format = {
 };
 
 const extraMetadata = {
-  external_url: "https://priceless-morse-1afff4.netlify.app/", // Replace with your website or remove this line if you do not have one.
+  external_url: "https://spontaneous-strudel-fad606.netlify.app/", //Replace with your website or remove this line if you do not have one.
 };
 
 // NFTPort Info
@@ -70,37 +70,37 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'rinkeby'; // only 'rinkeby' for testing or 'polygon' for production
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'THE BORED APE CANNABIS CLUB';
-const CONTRACT_SYMBOL = 'BACC';
+const CONTRACT_NAME = 'CA CLUB';
+const CONTRACT_SYMBOL = 'CA';
 const CONTRACT_TYPE = 'erc721';
 const METADATA_UPDATABLE = true; // set to true for testing
 // const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting, true if you're doing a reveal
-const OWNER_ADDRESS = '0x91932159EeB1F5653c9c60C62B530A4d421e09F8';  // Contract Owner and Treasury Owner (keep the sqme)
-const TREASURY_ADDRESS = '0x91932159EeB1F5653c9c60C62B530A4d421e09F8';  // This is where buyer funds will go, and will be stored in the contract until collected by the owner
+const OWNER_ADDRESS = '0xA3C25f44f6fF5c7494F7637CA705E18d06E20709';  // Contract Owner and Treasury Owner (keep the sqme)
+const TREASURY_ADDRESS = '0xA3C25f44f6fF5c7494F7637CA705E18d06E20709';  // This is where buyer funds will go, and will be stored in the contract until collected by the owner
 const MAX_SUPPLY = 10000; // The maximum number of NFTs that can be minted. ** CANNOT BE UPDATED! **
 // ** Be careful with this on Polygon price is in MATIC and cannot be updated once contract is created.
-const MINT_PRICE = 1; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. ** CANNOT BE UPDATED! **  Check MATIC prices on www.coionmarketcap.com
+const MINT_PRICE = 0.001; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. ** CANNOT BE UPDATED! **  Check MATIC prices on www.coionmarketcap.com
 const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 // ** For testing set the start date to today at 0800 UTC
 // Change the following line then: $ npm run update_public_mint_start_date ((Catch Error: NOK Contract is Frozen, need to create another contract))
-const PUBLIC_MINT_START_DATE = "2022-04-06T08:00:45+00:00";
+const PUBLIC_MINT_START_DATE = "2022-04-05T08:00:45+00:00";
 // const PUBLIC_MINT_START_DATE = "2022-04-03T16:00:45+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00 (+00:00 is UTC Time, EST is currently UTC - 4, we are at UTC -6 right now)
 //                              2022-04-03T10:00:45-06:00 would be my current local time
 //                              April 03 2022 at 10:00 am local time
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PRESALE_MINT_START_DATE = "2022-04-05T08:00:45+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
+const PRESALE_MINT_START_DATE = "2022-04-04T08:00:45+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
-const ROYALTY_ADDRESS = "0x91932159EeB1F5653c9c60C62B530A4d421e09F8"; // Address that will receive the royalty
+const ROYALTY_ADDRESS = "0xA3C25f44f6fF5c7494F7637CA705E18d06E20709"; // Address that will receive the royalty
 const BASE_URI = null; // only update if you want to manually set the base uri
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
 const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually set the whitelisted addresses
 
 // ** OPTIONAL **
 // let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it, not necessary
-let CONTRACT_ADDRESS = "0xC7AA3cB4FF8763E67f95535F248C0DEeE6F567dC"; // This is the RINKEBY contract for testing, remove for production
+let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // This is the RINKEBY contract for testing, remove for production
 
 // Removed Generic as I will not be doing a reveal, and if left in it causes an error when uploading Metadata (looking for Generic Metadata in _ipfsMetasGeneric and the file is not there).
 // Generic Metadata is optional if you want to reveal your NFTs, I will NOT be doing a reveal
@@ -125,12 +125,12 @@ try {
 
 // Will not be deploying yet on Solana (Solanart or Magic Eden), maybe later
 const solanaMetadata = {
-  symbol: "BACC",
+  symbol: "CA",
   seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://priceless-morse-1afff4.netlify.app/",
+  external_url: "https://spontaneous-strudel-fad606.netlify.app/",
   creators: [
     {
-      address: "0x91932159EeB1F5653c9c60C62B530A4d421e09F8",
+      address: "0xA3C25f44f6fF5c7494F7637CA705E18d06E20709",
       share: 100,
     },
   ],
