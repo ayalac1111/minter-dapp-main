@@ -1,3 +1,13 @@
+/*****************************************************************************
+Main configuration file for the Web site:
+
+Change the following variables:
+1.- contractAddress --> from `npm deploy_contract.  Found in backend/build/contract/_contract.json
+2.- welcome_h1 
+3.- welcome_p
+
+*****************************************************************************/
+
 const contractAddress = "0x1FB1C9Ef29958879cCE9a5F4Ee23173577324157"; //Replace with your own contract address
 const chain = 'rinkeby'; // rinkeby or polygon
 

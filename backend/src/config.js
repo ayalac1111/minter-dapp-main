@@ -14,8 +14,8 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "CA CLUB";
-const description = "The CA Club NFT Collection /n Playing with NFTs";
+const namePrefix = "CA Club NFT Collection";
+const description = "The CA Club NFT Collection Playing with NFTs";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
@@ -40,7 +40,7 @@ const layerConfigurations = [
     // Hand made Genesis Apes
     // There are only 18 Genesis Apes, and each is set to #1 so hopefully this works to generate one of each.
     // Note: add 18 to the growEdition # above, should be 5500 for polygon/Opensea.io Mainnet
-       growEditionSizeTo: 20,
+       growEditionSizeTo: 25,
        layersOrder: [
       { name: "Genesis" },
       { name: "HandMade" },
@@ -70,7 +70,7 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'rinkeby'; // only 'rinkeby' for testing or 'polygon' for production
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'CA CLUB';
+const CONTRACT_NAME = 'CA Club NFT Collection';
 const CONTRACT_SYMBOL = 'CA';
 const CONTRACT_TYPE = 'erc721';
 const METADATA_UPDATABLE = true; // set to true for testing
